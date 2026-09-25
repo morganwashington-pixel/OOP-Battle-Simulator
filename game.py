@@ -1,6 +1,6 @@
 from goblin import Goblin
 from hero import Hero
-
+from boss import Boss
 ARENA_NAME = "The Iron Square"
 
 def battle(hero: Hero, enemy: Goblin):
@@ -38,6 +38,9 @@ def main():
     hero_giveDamage = hero.attack()
     goblin.take_damage(hero_giveDamage)
     battle(hero, goblin)
+    
+    boss = Boss("Rick")
+    battle(hero,boss)
 
 
 if __name__ == "__main__":
